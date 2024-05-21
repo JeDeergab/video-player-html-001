@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     var video = document.getElementById('videoElement');
-    var audio = document.getElementById('audioElement'); // get the audio element
+    var audio = document.getElementById('audioElement'); // Ensure this is defined correctly
     var playPauseBtn = document.getElementById('playPauseBtn');
     var seekBar = document.getElementById('seekBar');
+    var resolutionBtn = document.getElementById('resolutionBtn');
+    var isHighResolution = true;
 
     playPauseBtn.addEventListener('click', function() {
         if (video.paused) {
             video.play();
-            audio.play(); // play audio when video plays
+            audio.play(); // Make sure audio plays along with the video
             playPauseBtn.textContent = 'Pause';
         } else {
             video.pause();
-            audio.pause(); // pause audio when video pauses
+            audio.pause(); // Ensure audio pauses along with the video
             playPauseBtn.textContent = 'Play';
         }
     });
@@ -26,9 +28,17 @@ document.addEventListener('DOMContentLoaded', function () {
         video.currentTime = time;
     });
 
-    seekBar.addEventListener('change', function() {
-        var time = video.duration * (seekBar.value / 100);
-        audio.currentTime = time; // sync audio position with video position only after user changes the seek bar
+    resolutionBtn.addEventListener('click', function() {
+        if (isHighResolution) {
+            video.width = 854;
+            video.height = 480;
+            resolutionBtn.textContent = 'Switch to HD';
+        } else {
+            video.width = 1280;
+            video.height = 720;
+            resolutionBtn.textContent = 'Change Resolution';
+        }
+        isHighResolution = !isHighResolution;
     });
 
     video.addEventListener('ended', function() {
