@@ -8,10 +8,16 @@
 </head>
 <body>
 <div class="video-player">
-    <video id="videoElement" width="640" height="360" controls>
+    <video id="videoElement" width="640" height="360">
         <source src="videos/your-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+	
+	</video>
+    <audio id="audioElement" hidden>
+        <source src="audios/your-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
 
     <div class="controls">
         <button id="playPauseBtn">Play</button>
