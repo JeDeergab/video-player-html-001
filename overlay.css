@@ -1,3 +1,5 @@
+/* Updated overlay.css */
+
 .overlay {
     position: absolute;
     top: 0;
@@ -9,11 +11,19 @@
     justify-content: center;
     align-items: center;
     pointer-events: none; /* Allows clicks to pass through to the video element */
+    z-index: 10; /* Ensure the overlay appears above other elements */
 }
 
-.overlay-content 
-{
+.overlay-content {
     pointer-events: auto; /* Enable interaction with content inside the overlay */
-    color: #00000; /* Text color */
-    font-size: 40px; /* Adjust as needed */
+    color: #000; /* Text color */
+    font-size: 24px; /* Adjust as needed */
+    text-align: center;
+}
+
+.overlay-content button {
+    margin-top: 20px; /* Space between text and button */
+    padding: 10px 20px; /* Button padding for better appearance */
+    font-size: 18px; /* Button text size */
+    cursor: pointer; /* Cursor change on hover */
 }

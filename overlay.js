@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         video.currentTime = 0; // Reset video to start
         audio.currentTime = 0; // Synchronize audio to start with video
         video.play();
-        audio.play();
+        //audio.play();
         playPauseBtn.textContent = 'Pause'; // Update button text to 'Pause'
         overlay.style.display = 'none'; // Ensure overlay is hidden on replay
     });
