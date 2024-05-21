@@ -20,3 +20,7 @@ To use the video player in your project, simply embed the player using the provi
 <iframe src="path_to_video_player.html" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 ```
 
+## Deleted & Removed
+- /audios
+- /videos
+
