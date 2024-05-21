@@ -1,42 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
     var overlay = document.getElementById('overlay');
-	
     var video = document.getElementById('videoElement');
-    var audio = document.getElementById('audioElement'); // get the audio element
-	
+    var audio = document.getElementById('audioElement');
     var replaybutton = document.getElementById('replaybutton');
+    var seekBar = document.getElementById('seekBar');
+    var playPauseBtn = document.getElementById('playPauseBtn');
 
     // Hide overlay initially
     overlay.style.display = 'none';
 
-    // Function to show overlay
     function showOverlay() {
         overlay.style.display = 'flex';
     }
 
-    // Event listener for video ending
     video.addEventListener('ended', function() {
         showOverlay();
+        playPauseBtn.textContent = 'Play'; // Change play button to 'Play'
+        seekBar.value = 0; // Reset seek bar
     });
 
-    // Optional: Hide overlay on video play
     video.addEventListener('play', function() {
         overlay.style.display = 'none';
     });
-	
-	// Replay button to play video and audio
-	replaybutton.addEventListener('click', function() 
-	{
-        video.play();
-        audio.play(); // play audio when video plays
-	});
 
-    video.addEventListener('ended', function() 
-	{
-        audio.pause();
-        audio.currentTime = 0; // reset the audio to the start
-        replaybutton.textContent = 'Replay';
-        seekBar.value = 0; // reset the seek bar
+    // Handling the replay functionality
+    replaybutton.addEventListener('click', function() {
+        video.currentTime = 0; // Reset video to start
+        video.play();
+        audio.currentTime = 0; // Synchronize audio to start with video
+        audio.play();
+        playPauseBtn.textContent = 'Pause'; // Update button text to 'Pause'
     });
-	
 });
