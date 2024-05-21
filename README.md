@@ -18,3 +18,6 @@ To use the video player in your project, simply embed the player using the provi
 ```html
 <!-- Example of embedding the video player using iframe -->
 <iframe src="path_to_video_player.html" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+```
+
+This `README` provides an overview of your project, features, usage instructions, and licensing information, which are essential for effectively communicating with potential users and contributors on GitHub.
