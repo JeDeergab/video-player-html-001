@@ -36,3 +36,26 @@ video {
 #seekBar {
     width: 100%; /* Adjust the seek bar width if necessary */
 }
+
+/* Additional full-screen specific styles */
+:fullscreen .controls {
+    position: absolute;
+    bottom: 0; /* Ensure controls are at the bottom in full-screen */
+    width: 100%; /* Stretch across the full width of the screen */
+}
+
+:fullscreen .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the full screen with the overlay */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:fullscreen video {
+    height: 90%; /* Adjust video size to make space for controls */
+}
+
