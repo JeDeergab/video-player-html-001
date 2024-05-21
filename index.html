@@ -5,9 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simple Video Player</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="overlay.css">
 </head>
 <body>
 <div class="video-player">
+
+	<div class="overlay" id="overlay">
+		<!-- Add your end-of-video content here -->
+		<div class="overlay-content">
+		<center>
+			<h1>Thanks for watching!</h1>
+			<button id="replaybutton">Replay</button>
+		</center>
+		</div>
+	</div>
+
+
     <video id="videoElement">
         <source src="videos/your-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -25,5 +38,6 @@
     </div>
 </div>
 <script src="script.js"></script>
+<script src="overlay.js"></script>
 </body>
 </html>
