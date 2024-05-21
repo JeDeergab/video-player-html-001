@@ -3,12 +3,15 @@ body, html {
     margin: 0;
     padding: 0;
     background: #000; /* Optional: sets a black background around the video player */
+	overflow: hidden; /* Prevents scrollbars by hiding overflow */
 }
 
 .video-player {
     position: relative; /* Updated for positioning controls absolutely */
-    height: 100vh; /* Make the video player take the full height of the viewport */
+    height: 100%; /* Make the video player take the full height of the viewport */
     width: 100%; /* Ensure it spans the full width */
+	padding-top: 0%; /* Aspect Ratio padding */
+	margin: 0 auto; /* Centers the video player horizontally */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +21,7 @@ body, html {
 video {
     height: 100%; /* Video height is 100% of its container */
     width: 100%; /* Video width is 100% of its container */
-    object-fit: cover; /* Ensures the aspect ratio is maintained while filling the area */
+    object-fit: contain; /* Ensures the aspect ratio is maintained while filling the area */
 }
 
 .controls {
