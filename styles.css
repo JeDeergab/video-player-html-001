@@ -1,0 +1,17 @@
+.video-player {
+    width: 640px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+#seekBar {
+    width: 100%;
+}
