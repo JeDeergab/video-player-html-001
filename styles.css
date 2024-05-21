@@ -1,18 +1,35 @@
+body, html {
+    height: 100%;  /* Ensure the full height of the viewport is used */
+    margin: 0;
+    padding: 0;
+    background: #000; /* Optional: sets a black background around the video player */
+}
+
 .video-player {
-    width: 100%;  /* Allows video to resize within this container */
-    max-width: 1280px;  /* Ensures that the video does not exceed 1280px width */
-    margin: auto;
+    position: relative; /* Updated for positioning controls absolutely */
+    height: 100vh; /* Make the video player take the full height of the viewport */
+    width: 100%; /* Ensure it spans the full width */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+video {
+    height: 100%; /* Video height is 100% of its container */
+    width: 100%; /* Video width is 100% of its container */
+    object-fit: cover; /* Ensures the aspect ratio is maintained while filling the area */
+}
+
 .controls {
+    position: absolute;
+    bottom: 10px; /* Positioned at the bottom of the video player */
+    width: 100%; /* Controls width matches the video player */
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: adds a semi-transparent background to the controls */
 }
 
 #seekBar {
-    width: 100%;
+    width: 100%; /* Adjust the seek bar width if necessary */
 }
