@@ -10,7 +10,7 @@ This repository hosts a custom video player developed as a personal project aime
 - **Replay Functionality:** Users can replay the video directly from the overlay, making it convenient to watch the video again without needing to reload or scroll.
 
 ## Audio Control
-The player includes a feature to mute/unmute audio. By default, the audio is active, but you can easily control 'TEST' this by uncommenting the 'audio.pause();` line in the JavaScript file to mute the audio.
+The player includes a feature to mute/unmute audio. By default, the audio is active, but you can easily control this by uncommenting the 'audio.pause();` line in the JavaScript file to mute the audio.
 
 ## Usage
 To use the video player in your project, simply embed the player using the provided iframe syntax on your desired page. For fullscreen usage, direct users to the native page of the video player.
